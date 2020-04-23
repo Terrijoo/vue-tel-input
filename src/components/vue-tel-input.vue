@@ -302,7 +302,7 @@ export default {
         }
       }
       // Reset the cursor to current position if it's not the last character.
-      if (this.cursorPosition < oldValue.length) {
+      if (this.cursorPosition < oldValue.length && this.$refs.input === document.activeElement) {
         this.$nextTick(() => { setCaretPosition(this.$refs.input, this.cursorPosition); });
       }
     },
