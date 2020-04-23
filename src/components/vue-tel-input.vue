@@ -41,7 +41,6 @@
       :autofocus="autofocus"
       :class="['vti__input', inputClasses]"
       :disabled="disabled"
-      :id="inputId"
       :maxlength="maxLen"
       :name="name"
       :placeholder="parsedPlaceholder"
