@@ -256,6 +256,17 @@ export default {
         isValid: result.valid,
         country: this.activeCountry,
       });
+
+      if (
+        result.regionCode
+        && this.onlyCountries
+        && this.onlyCountries.length
+        && !this.onlyCountries.includes(result.regionCode)
+      ) {
+        result.valid = false;
+        result.isValid = false;
+        result.validType = 'PHONE_INCORRECT_REGION';
+      }
       return result;
     },
     phoneText() {
